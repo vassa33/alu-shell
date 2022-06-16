@@ -3,7 +3,7 @@
 i=0
 while [[ $i -ne 10 ]]
 do
-  if [ $i == 9 ]
+  if [ $i -eq 9 ]
   then
     echo "Best School \nHi"
     ((i++))
