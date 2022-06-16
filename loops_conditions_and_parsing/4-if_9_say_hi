@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 #Iterating through "Best School" 10 times using the while loop and the if loop to check a condition
-
 i=0
-while [ $i -lt 10 ]
+while [[ $i -lt 10 ]]
 do
   if [ $i -eq 9 ]
   then
