@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-#Displaying "Best School" 10 times using the while loop
-i=0
-while [[ $i -ne 10 ]]
-do 
+#displays Best School 10 times using while loop
+z=0
+while [[ $z -ne 10 ]]
+do
     echo "Best School"
-    ((i++))
+    ((z++))
 done
