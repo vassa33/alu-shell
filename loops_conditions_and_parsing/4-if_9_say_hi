@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
-#Iterating through "Best School" 10 times using the while loop and the if loop to check a condition
-i=0
-while [[ $i -lt 10 ]]
+# Displays 'Best School'. Displays Hi on the 9th iteration
+
+index=0
+
+while [ $index -lt 10 ]
 do
-  if [ $i -eq 9 ]
+  if [ $index -eq 9 ]
   then
     echo "Hi"
   fi
   echo "Best School"
-  (( i++ ))
+  (( index++ ))
 done
-  
