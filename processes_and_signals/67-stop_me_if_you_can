@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#Another method of terminating a process
+pkill -f 7-highlander
