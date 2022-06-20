@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-#Displaying a list of currently running processes
-#f - process hierarchy, a - all users, u - user-oriented format, x-shows processes without TTy
+# Displaying a list of currently running processes (f - process hierarchy, a - all users, u - user-oriented format, x-shows processes without TTy)
 ps -faux
