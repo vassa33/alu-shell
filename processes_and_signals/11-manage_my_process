@@ -1,24 +1,24 @@
 #!/usr/bin/env bash
 # Managing the "manage_my_process" file
-if [[ $1 = "start" ]]
+if [ "${1}" == "start" ]
 then
-	./manage_my_process &
-	echo $! > my_process.pid
-	sudo mv my_process.pid /var/run/
-	echo "manage_my_process started"
-elif [[ $1 = "stop"  ]]
+    ./manage_my_process &
+    touch /var/run/my_process.pid
+    echo "$!" > /var/run/my_process.pid
+    echo "manage_my_process started"
+elif [ "${1}" == "stop" ]
 then
-	kill "$( cat /var/run/my_process.pid )"
-	sudo rm /var/run/my_process.pid
-	echo "manage_my_process stopped"
-elif [[ $1 = "restart"  ]]
+    echo "manage_my_process stopped"
+    kill "$(cat /var/run/my_process.pid)"
+    rm /var/run/my_process.pid
+elif [ "${1}" == "restart" ]
 then
-	kill "$( cat /var/run/my_process.pid )"
-	sudo rm /var/run/my_process.pid
-	./manage_my_pocess &
-	echo $! > my_process.rpid
-	sudo mv my_process.pid /var/run/
-	echo "manage_my_process restarted"
+    kill "$(cat /var/run/my_process.pid)"
+    rm /var/run/my_process.pid
+    ./manage_my_process &
+    touch /var/run/my_process.pid
+    echo "$!" > /var/run/my_process.pid
+    echo "manage_my_process restarted"
 else
-	echo "Usage: manage_my_procss {start|stop|restart}"
+    echo "Usage: manage_my_process {start|stop|restart}"
 fi
