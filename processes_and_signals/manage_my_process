@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#Infinite loop
+while true
+do 
+    echo "I am alive!" > /tmp/my_process
+    Thread.Sleep(2000)
+done
